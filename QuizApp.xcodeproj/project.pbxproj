@@ -18,6 +18,7 @@
 		EAFBBBBC2669B3BE007DA996 /* ResultsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBBBBB2669B3BE007DA996 /* ResultsViewControllerTest.swift */; };
 		EAFBBBBE2669B43F007DA996 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBBBBD2669B43F007DA996 /* ResultsViewController.swift */; };
 		EAFBBBC02669B48A007DA996 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFBBBBF2669B48A007DA996 /* ResultsViewController.xib */; };
+		EAFBBBC22669BCC8007DA996 /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBBBC12669BCC8007DA996 /* TableViewHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		EAFBBBBB2669B3BE007DA996 /* ResultsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTest.swift; sourceTree = "<group>"; };
 		EAFBBBBD2669B43F007DA996 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		EAFBBBBF2669B48A007DA996 /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
+		EAFBBBC12669BCC8007DA996 /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				EAC3174426229904003B8015 /* QuestionViewControllerTest.swift */,
 				EAFBBBBB2669B3BE007DA996 /* ResultsViewControllerTest.swift */,
+				EAFBBBC12669BCC8007DA996 /* TableViewHelpers.swift */,
 				EAC31721262292B4003B8015 /* Info.plist */,
 			);
 			path = QuizAppTests;
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAC3174526229904003B8015 /* QuestionViewControllerTest.swift in Sources */,
+				EAFBBBC22669BCC8007DA996 /* TableViewHelpers.swift in Sources */,
 				EAFBBBBC2669B3BE007DA996 /* ResultsViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
