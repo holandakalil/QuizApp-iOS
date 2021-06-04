@@ -19,6 +19,8 @@
 		EAFBBBBE2669B43F007DA996 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBBBBD2669B43F007DA996 /* ResultsViewController.swift */; };
 		EAFBBBC02669B48A007DA996 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFBBBBF2669B48A007DA996 /* ResultsViewController.xib */; };
 		EAFBBBC22669BCC8007DA996 /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBBBC12669BCC8007DA996 /* TableViewHelpers.swift */; };
+		EAFBBBC42669BF9B007DA996 /* CorrectAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFBBBC32669BF9B007DA996 /* CorrectAnswerCell.xib */; };
+		EAFBBBC62669C540007DA996 /* WrongAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFBBBC52669C540007DA996 /* WrongAnswerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		EAFBBBBD2669B43F007DA996 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		EAFBBBBF2669B48A007DA996 /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
 		EAFBBBC12669BCC8007DA996 /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
+		EAFBBBC32669BF9B007DA996 /* CorrectAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectAnswerCell.xib; sourceTree = "<group>"; };
+		EAFBBBC52669C540007DA996 /* WrongAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongAnswerCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				EAC3174E26229AC4003B8015 /* QuestionViewController.xib */,
 				EAFBBBBD2669B43F007DA996 /* ResultsViewController.swift */,
 				EAFBBBBF2669B48A007DA996 /* ResultsViewController.xib */,
+				EAFBBBC32669BF9B007DA996 /* CorrectAnswerCell.xib */,
+				EAFBBBC52669C540007DA996 /* WrongAnswerCell.xib */,
 				EAC31711262292B4003B8015 /* Assets.xcassets */,
 				EAC31713262292B4003B8015 /* LaunchScreen.storyboard */,
 				EAC31716262292B4003B8015 /* Info.plist */,
@@ -245,8 +251,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAC31715262292B4003B8015 /* LaunchScreen.storyboard in Resources */,
+				EAFBBBC62669C540007DA996 /* WrongAnswerCell.xib in Resources */,
 				EAC31712262292B4003B8015 /* Assets.xcassets in Resources */,
 				EAC3174F26229AC4003B8015 /* QuestionViewController.xib in Resources */,
+				EAFBBBC42669BF9B007DA996 /* CorrectAnswerCell.xib in Resources */,
 				EAFBBBC02669B48A007DA996 /* ResultsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
