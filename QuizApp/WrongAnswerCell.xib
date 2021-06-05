@@ -41,6 +41,7 @@
             <connections>
                 <outlet property="correctAnswerLabel" destination="mgG-v1-q2R" id="Fa0-9v-jTj"/>
                 <outlet property="questionLabel" destination="PU6-3U-NCY" id="N30-8T-J4j"/>
+                <outlet property="wrongAnswerLabel" destination="8MI-KI-OmP" id="iaz-ee-ZhS"/>
             </connections>
             <point key="canvasLocation" x="-13.043478260869566" y="31.138392857142854"/>
         </tableViewCell>
