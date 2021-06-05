@@ -7,23 +7,6 @@
 
 import UIKit
 
-struct PresentableAnswer {
-    let question: String
-    let answer: String
-    let wrongAnswer: String?
-}
-
-final class CorrectAnswerCell: UITableViewCell {
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var answerLabel: UILabel!
-}
-
-final class WrongAnswerCell: UITableViewCell {
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var correctAnswerLabel: UILabel!
-    @IBOutlet weak var wrongAnswerLabel: UILabel!
-}
-
 final class ResultsViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
@@ -41,8 +24,9 @@ final class ResultsViewController: UIViewController {
         super.viewDidLoad()
         
         headerLabel.text = summary
-        tableView.register(UINib(nibName: "CorrectAnswerCell", bundle: nil), forCellReuseIdentifier: "CorrectAnswerCell")
-        tableView.register(UINib(nibName: "WrongAnswerCell", bundle: nil), forCellReuseIdentifier: "WrongAnswerCell")
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(CorrectAnswerCell.self)
+        tableView.register(WrongAnswerCell.self)
     }
 }
 
@@ -60,14 +44,14 @@ extension ResultsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     private func createCorrecAnswerCell(answer: PresentableAnswer) -> CorrectAnswerCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CorrectAnswerCell") as! CorrectAnswerCell
+        let cell = tableView.dequeueReusableCell(CorrectAnswerCell.self)!
         cell.questionLabel.text = answer.question
         cell.answerLabel.text = answer.answer
         return cell
     }
     
     private func createWrongAnswerCell(answer: PresentableAnswer) -> WrongAnswerCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WrongAnswerCell") as! WrongAnswerCell
+        let cell = tableView.dequeueReusableCell(WrongAnswerCell.self)!
         cell.questionLabel.text = answer.question
         cell.correctAnswerLabel.text = answer.answer
         cell.wrongAnswerLabel.text = answer.wrongAnswer

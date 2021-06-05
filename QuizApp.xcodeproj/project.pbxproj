@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA880734266C26A600E85D44 /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA880733266C26A600E85D44 /* Extension+UITableView.swift */; };
+		EA880736266C26E200E85D44 /* PresentableAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA880735266C26E200E85D44 /* PresentableAnswer.swift */; };
+		EA880738266C270300E85D44 /* CorrectAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA880737266C270300E85D44 /* CorrectAnswerCell.swift */; };
+		EA88073A266C271F00E85D44 /* WrongAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA880739266C271F00E85D44 /* WrongAnswerCell.swift */; };
 		EAC31709262292B2003B8015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC31708262292B2003B8015 /* AppDelegate.swift */; };
 		EAC3170B262292B2003B8015 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3170A262292B2003B8015 /* SceneDelegate.swift */; };
 		EAC31712262292B4003B8015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC31711262292B4003B8015 /* Assets.xcassets */; };
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA880733266C26A600E85D44 /* Extension+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableView.swift"; sourceTree = "<group>"; };
+		EA880735266C26E200E85D44 /* PresentableAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableAnswer.swift; sourceTree = "<group>"; };
+		EA880737266C270300E85D44 /* CorrectAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerCell.swift; sourceTree = "<group>"; };
+		EA880739266C271F00E85D44 /* WrongAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerCell.swift; sourceTree = "<group>"; };
 		EAC31705262292B2003B8015 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC31708262292B2003B8015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAC3170A262292B2003B8015 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA880732266C268E00E85D44 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EA880733266C26A600E85D44 /* Extension+UITableView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		EAC316FC262292B2003B8015 = {
 			isa = PBXGroup;
 			children = (
@@ -91,13 +107,17 @@
 		EAC31707262292B2003B8015 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				EA880732266C268E00E85D44 /* Helpers */,
 				EAC31708262292B2003B8015 /* AppDelegate.swift */,
 				EAC3170A262292B2003B8015 /* SceneDelegate.swift */,
 				EAC3174926229A00003B8015 /* QuestionViewController.swift */,
 				EAC3174E26229AC4003B8015 /* QuestionViewController.xib */,
 				EAFBBBBD2669B43F007DA996 /* ResultsViewController.swift */,
+				EA880735266C26E200E85D44 /* PresentableAnswer.swift */,
 				EAFBBBBF2669B48A007DA996 /* ResultsViewController.xib */,
+				EA880737266C270300E85D44 /* CorrectAnswerCell.swift */,
 				EAFBBBC32669BF9B007DA996 /* CorrectAnswerCell.xib */,
+				EA880739266C271F00E85D44 /* WrongAnswerCell.swift */,
 				EAFBBBC52669C540007DA996 /* WrongAnswerCell.xib */,
 				EAC31711262292B4003B8015 /* Assets.xcassets */,
 				EAC31713262292B4003B8015 /* LaunchScreen.storyboard */,
@@ -222,7 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAC31709262292B2003B8015 /* AppDelegate.swift in Sources */,
+				EA880734266C26A600E85D44 /* Extension+UITableView.swift in Sources */,
+				EA880738266C270300E85D44 /* CorrectAnswerCell.swift in Sources */,
 				EAC3170B262292B2003B8015 /* SceneDelegate.swift in Sources */,
+				EA880736266C26E200E85D44 /* PresentableAnswer.swift in Sources */,
+				EA88073A266C271F00E85D44 /* WrongAnswerCell.swift in Sources */,
 				EAC3174A26229A00003B8015 /* QuestionViewController.swift in Sources */,
 				EAFBBBBE2669B43F007DA996 /* ResultsViewController.swift in Sources */,
 			);
