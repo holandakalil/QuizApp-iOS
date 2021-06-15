@@ -12,11 +12,15 @@ import QuizEngine
 
 final class ResultsPresenterTest: XCTestCase {
     
-    // MARK: Summary
+    let singleQuestion1 = Question.singleAnswer("Q1")
+    let multipleQuestion1 = Question.multipleAnswer("Q1")
+    let multipleQuestion2 = Question.multipleAnswer("Q2")
+    
     func test_summary_withTwoQuestionAndScoreOne_returnsSummary() {
-        let answers = [Question.singleAnswer("Q1"): ["A1"], Question.multipleAnswer("Q2"): ["A2", "A3"]]
+        let answers = [singleQuestion1: ["A1"], multipleQuestion2: ["A2", "A3"]]
         let result = Result.make(answer: answers, score: 1)
-        let sut = ResultsPresenter(result: result, correctAnswers: [:])
+        let orderedQuestions = [singleQuestion1, multipleQuestion2]
+        let sut = ResultsPresenter(result: result, questions: orderedQuestions, correctAnswers: [:])
         
         XCTAssertEqual(sut.summary, "You got 1/2 correct")
     }
@@ -24,17 +28,16 @@ final class ResultsPresenterTest: XCTestCase {
     func test_presentableAnswers_withoutQuestions_shouldBeEmpty() {
         let answers = [Question<String>: [String]]()
         let result = Result.make(answer: answers, score: 0)
-        let sut = ResultsPresenter(result: result, correctAnswers: [:])
+        let sut = ResultsPresenter(result: result, questions: [], correctAnswers: [:])
         
         XCTAssertTrue(sut.presentableAnswers.isEmpty)
     }
     
-    // MARK: Single Answer
     func test_presentableAnswers_withWrongSingleAnswer_mapsAnswer() {
-        let answers = [Question.singleAnswer("Q1"): ["A1"]]
-        let correctAnswers = [Question.singleAnswer("Q1"): ["A2"]]
+        let answers = [singleQuestion1: ["A1"]]
+        let correctAnswers = [singleQuestion1: ["A2"]]
         let result = Result.make(answer: answers, score: 0)
-        let sut = ResultsPresenter(result: result, correctAnswers: correctAnswers)
+        let sut = ResultsPresenter(result: result, questions: [singleQuestion1], correctAnswers: correctAnswers)
         
         XCTAssertEqual(sut.presentableAnswers.count, 1)
         XCTAssertEqual(sut.presentableAnswers.first!.question, "Q1")
@@ -42,24 +45,11 @@ final class ResultsPresenterTest: XCTestCase {
         XCTAssertEqual(sut.presentableAnswers.first!.wrongAnswer, "A1")
     }
     
-    func test_presentableAnswers_withRightSingleAnswer_mapsAnswer() {
-        let answers = [Question.singleAnswer("Q1"): ["A1"]]
-        let correctAnswers = [Question.singleAnswer("Q1"): ["A1"]]
-        let result = Result.make(answer: answers, score: 0)
-        let sut = ResultsPresenter(result: result, correctAnswers: correctAnswers)
-        
-        XCTAssertEqual(sut.presentableAnswers.count, 1)
-        XCTAssertEqual(sut.presentableAnswers.first!.question, "Q1")
-        XCTAssertEqual(sut.presentableAnswers.first!.answer, "A1")
-        XCTAssertNil(sut.presentableAnswers.first!.wrongAnswer)
-    }
-    
-    // MARK: Multiple Answer
     func test_presentableAnswers_withWrongMultipleAnswer_mapsAnswer() {
-        let answers = [Question.multipleAnswer("Q1"): ["A1", "A4"]]
-        let correctAnswers = [Question.multipleAnswer("Q1"): ["A2", "A3"]]
+        let answers = [multipleQuestion1: ["A1", "A4"]]
+        let correctAnswers = [multipleQuestion1: ["A2", "A3"]]
         let result = Result.make(answer: answers, score: 0)
-        let sut = ResultsPresenter(result: result, correctAnswers: correctAnswers)
+        let sut = ResultsPresenter(result: result, questions: [multipleQuestion1], correctAnswers: correctAnswers)
         
         XCTAssertEqual(sut.presentableAnswers.count, 1)
         XCTAssertEqual(sut.presentableAnswers.first!.question, "Q1")
@@ -67,15 +57,20 @@ final class ResultsPresenterTest: XCTestCase {
         XCTAssertEqual(sut.presentableAnswers.first!.wrongAnswer, "A1, A4")
     }
     
-    func test_presentableAnswers_withRightMultipleAnswer_mapsAnswer() {
-        let answers = [Question.multipleAnswer("Q1"): ["A1", "A4"]]
-        let correctAnswers = [Question.multipleAnswer("Q1"): ["A1", "A4"]]
+    func test_presentableAnswers_withTwoQuestion_mapsOrderedAnswer() {
+        let answers = [multipleQuestion2: ["A2"], multipleQuestion1: ["A1", "A4"]]
+        let correctAnswers = [multipleQuestion2: ["A2"], multipleQuestion1: ["A1", "A4"]]
+        let orderedQuestions = [multipleQuestion1, multipleQuestion2]
         let result = Result.make(answer: answers, score: 0)
-        let sut = ResultsPresenter(result: result, correctAnswers: correctAnswers)
-        
-        XCTAssertEqual(sut.presentableAnswers.count, 1)
+        let sut = ResultsPresenter(result: result, questions: orderedQuestions, correctAnswers: correctAnswers)
+
+        XCTAssertEqual(sut.presentableAnswers.count, 2)
         XCTAssertEqual(sut.presentableAnswers.first!.question, "Q1")
         XCTAssertEqual(sut.presentableAnswers.first!.answer, "A1, A4")
         XCTAssertNil(sut.presentableAnswers.first!.wrongAnswer)
+
+        XCTAssertEqual(sut.presentableAnswers.last!.question, "Q2")
+        XCTAssertEqual(sut.presentableAnswers.last!.answer, "A2")
+        XCTAssertNil(sut.presentableAnswers.last!.wrongAnswer)
     }
 }
