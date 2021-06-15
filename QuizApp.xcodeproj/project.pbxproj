@@ -30,6 +30,8 @@
 		EAF9AA062675C1BC00CBA032 /* iOSViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF9AA052675C1BC00CBA032 /* iOSViewControllerFactory.swift */; };
 		EAF9AA082677034E00CBA032 /* ResultsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF9AA072677034E00CBA032 /* ResultsPresenterTest.swift */; };
 		EAF9AA0B267704D400CBA032 /* ResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF9AA0A267704D400CBA032 /* ResultsPresenter.swift */; };
+		EAF9AA0D267842DE00CBA032 /* QuestionPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF9AA0C267842DE00CBA032 /* QuestionPresenterTest.swift */; };
+		EAF9AA0F267843AF00CBA032 /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF9AA0E267843AF00CBA032 /* QuestionPresenter.swift */; };
 		EAFBBBBC2669B3BE007DA996 /* ResultsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBBBBB2669B3BE007DA996 /* ResultsViewControllerTest.swift */; };
 		EAFBBBBE2669B43F007DA996 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBBBBD2669B43F007DA996 /* ResultsViewController.swift */; };
 		EAFBBBC02669B48A007DA996 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFBBBBF2669B48A007DA996 /* ResultsViewController.xib */; };
@@ -89,6 +91,8 @@
 		EAF9AA052675C1BC00CBA032 /* iOSViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactory.swift; sourceTree = "<group>"; };
 		EAF9AA072677034E00CBA032 /* ResultsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenterTest.swift; sourceTree = "<group>"; };
 		EAF9AA0A267704D400CBA032 /* ResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenter.swift; sourceTree = "<group>"; };
+		EAF9AA0C267842DE00CBA032 /* QuestionPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenterTest.swift; sourceTree = "<group>"; };
+		EAF9AA0E267843AF00CBA032 /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
 		EAFBBBBB2669B3BE007DA996 /* ResultsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTest.swift; sourceTree = "<group>"; };
 		EAFBBBBD2669B43F007DA996 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		EAFBBBBF2669B48A007DA996 /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				EAF9AA012675BFB200CBA032 /* ViewControllerFactory.swift */,
 				EAF9AA052675C1BC00CBA032 /* iOSViewControllerFactory.swift */,
 				EAF9AA0A267704D400CBA032 /* ResultsPresenter.swift */,
+				EAF9AA0E267843AF00CBA032 /* QuestionPresenter.swift */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				EAF9A9FF2675898B00CBA032 /* ResultHelper.swift */,
 				EAF9AA032675C0C400CBA032 /* iOSViewControllerFactoryTest.swift */,
 				EAF9AA072677034E00CBA032 /* ResultsPresenterTest.swift */,
+				EAF9AA0C267842DE00CBA032 /* QuestionPresenterTest.swift */,
 			);
 			path = QuizAppTests;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 				EAC3170B262292B2003B8015 /* SceneDelegate.swift in Sources */,
 				EA880736266C26E200E85D44 /* PresentableAnswer.swift in Sources */,
 				EAF9A9FE267276CF00CBA032 /* Question.swift in Sources */,
+				EAF9AA0F267843AF00CBA032 /* QuestionPresenter.swift in Sources */,
 				EA88073A266C271F00E85D44 /* WrongAnswerCell.swift in Sources */,
 				EA9D734E266DAF6A001B7B02 /* NavigationControllerRouter.swift in Sources */,
 				EAC3174A26229A00003B8015 /* QuestionViewController.swift in Sources */,
@@ -323,6 +330,7 @@
 				EA9D734C266DADB8001B7B02 /* NavigationControllerRouterTest.swift in Sources */,
 				EAF9AA002675898B00CBA032 /* ResultHelper.swift in Sources */,
 				EAC3174526229904003B8015 /* QuestionViewControllerTest.swift in Sources */,
+				EAF9AA0D267842DE00CBA032 /* QuestionPresenterTest.swift in Sources */,
 				EAF9AA042675C0C400CBA032 /* iOSViewControllerFactoryTest.swift in Sources */,
 				EAFBBBC22669BCC8007DA996 /* TableViewHelpers.swift in Sources */,
 				EAFBBBBC2669B3BE007DA996 /* ResultsViewControllerTest.swift in Sources */,
