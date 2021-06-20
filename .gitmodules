@@ -1,0 +1,3 @@
+[submodule "QuizEngine"]
+	path = QuizEngine
+	url = https://github.com/holandakalil/QuizEngine.git

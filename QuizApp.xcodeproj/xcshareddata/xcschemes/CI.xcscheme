@@ -46,7 +46,7 @@
                BlueprintIdentifier = "EA9D732F266D9CAE001B7B02"
                BuildableName = "QuizEngine_iOSTests.xctest"
                BlueprintName = "QuizEngine_iOSTests"
-               ReferencedContainer = "container:../QuizEngine/QuizEngine.xcodeproj">
+               ReferencedContainer = "container:QuizEngine/QuizEngine.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
