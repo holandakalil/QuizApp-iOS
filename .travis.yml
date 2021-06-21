@@ -8,4 +8,3 @@ branches:
   - main
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-script: xcodebuild clean build test ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
