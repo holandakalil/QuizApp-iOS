@@ -1,6 +1,6 @@
 os: osx
 osx_target: xcode12.5
-xcode_sdk: iphonesimulator14.5
+xcode_sdk: iphoneos14.5
 language: swift
 branches:
   only:
