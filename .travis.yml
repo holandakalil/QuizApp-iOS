@@ -1,9 +1,10 @@
 os: osx
 osx_target: xcode12.5
+xcode_sdk: iphonesimulator14.5
 language: swift
 branches:
   only:
   - main
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-script: xcodebuild clean build test -workspace QuizApp.xcworkspace -scheme "CI" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.5,name=iPhone X"
+script: xcodebuild clean build test -workspace QuizApp.xcworkspace -scheme "CI" 
