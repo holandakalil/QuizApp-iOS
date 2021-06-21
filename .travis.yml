@@ -6,4 +6,4 @@ branches:
   - main
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-script: xcodebuild clean build test -workspace QuizApp.xcworkspace -scheme "CI" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.5,name=iPhone 12"
+script: xcodebuild clean build test -workspace QuizApp.xcworkspace -scheme "CI" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.5,name=iPhone X"
