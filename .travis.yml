@@ -1,0 +1,11 @@
+osx_image: xcode12.3
+language: swift
+xcode_workspace: QuizApp.xcworkspace
+xcode_scheme: CI
+xcode_destination: platform=iOS Simulator,OS=14.3,name=iPhone 12
+xcode_sdk: iphonesimulator14.3
+branches:
+  only:
+  - main
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
