@@ -27,7 +27,7 @@ final class ResultsPresenterTest: XCTestCase {
         let answers = [singleQuestion1: ["A1"], multipleQuestion2: ["A2", "A3"]]
         let result = Result.make(answer: answers, score: 1)
         let orderedQuestions = [singleQuestion1, multipleQuestion2]
-        let sut = ResultsPresenter(result: result, questions: orderedQuestions, correctAnswers: [:])
+        let sut = ResultsPresenter(result: result, questions: orderedQuestions, correctAnswers: answers)
         
         XCTAssertEqual(sut.summary, "You got 1/2 correct")
     }
