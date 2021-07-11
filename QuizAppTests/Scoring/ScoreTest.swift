@@ -7,6 +7,7 @@
 
 import Foundation
 import XCTest
+@testable import QuizApp
 
 final class ScoreTest: XCTestCase {
     let answer1 = "an answer"
@@ -51,13 +52,5 @@ final class ScoreTest: XCTestCase {
             for: [answer2, answer2],
             comparingTo: [answer1, answer2, "extra answer"])
         XCTAssertEqual(score, 1)
-    }
-    
-    private final class BasicScore {
-        static func score(for answers: [String], comparingTo correctAnswers: [String]) -> Int {
-            return zip(answers, correctAnswers).reduce(0) { score, tuple in
-                return score + (tuple.0 == tuple.1 ? 1 : 0)
-            }
-        }
     }
 }
